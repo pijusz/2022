@@ -4,8 +4,8 @@
 # assignments can overlap
 
 
-def parse(data_line: str | None) -> tuple[int, int, int, int]:
-    sections = line.split(",")
+def parse(data_line: str) -> tuple[int, int, int, int]:
+    sections = data_line.split(",")
     section_1 = sections[0].split("-")
     section_2 = sections[1].split("-")
 
