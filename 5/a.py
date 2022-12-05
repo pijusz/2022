@@ -37,7 +37,6 @@ def get_cargo(lines: list[str]) -> list[list[str]]:
 
 
 cargo, moves = get_input()
-# answer 1
 for move in moves:
     for i in range(move[0]):
         cargo[move[2]].append(cargo[move[1]].pop())
@@ -45,8 +44,8 @@ for move in moves:
 answer_1 = "".join(c[-1] for c in cargo)
 print("Answer #1 ", answer_1)
 
+# reset
 cargo, moves = get_input()
-# answer 2
 for move in moves:
     cargo[move[2]] += cargo[move[1]][-move[0] :]
     cargo[move[1]] = cargo[move[1]][: -move[0]]
